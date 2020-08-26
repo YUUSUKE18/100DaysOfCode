@@ -54,7 +54,6 @@ header .content p {
     min-height: 650px;
   }
   header::before {
-    width: 100vh;
     height: 75vh;
   }
   header h2 {
