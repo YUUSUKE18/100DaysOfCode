@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(0, 0, 0);
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul li {
+  position: relative;
+  list-style: none;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+ul li .fa {
+  font-size: 4em;
+  color: rgb(34, 34, 34);
+}
+
+ul li::before {
+  font-family: fontAwesome;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 4em;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+ul li:nth-child(1)::before {
+  content: "\f099";
+  color: rgb(71, 161, 236);
+  border-bottom: 4px solid rgb(71, 161, 236);
+}
+
+ul li:nth-child(2)::before {
+  content: "\f167";
+  color: rgb(252, 16, 16);
+  border-bottom: 4px solid rgb(252, 16, 16);
+}
+
+ul li:nth-child(3)::before {
+  content: "\f08c";
+  color: rgb(46, 119, 176);
+  border-bottom: 4px solid rgb(46, 119, 176);
+}
+
+ul li:hover::before {
+  height: 100%;
+}
