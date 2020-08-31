@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(0, 0, 0);
+}
+
+.banner {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: url("bg.jpeg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  clip-path: circle(75px at var(--x) var(--y));
+}
+
+.banner:active {
+  clip-path: circle(400px at var(--x) var(--y));
+}
+
+.content {
+  position: relative;
+  max-width: 1000px;
+  z-index: 3;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  user-select: none;
+}
+
+.content h2 {
+  position: relative;
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+}
+
+.content p {
+  position: relative;
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+}
