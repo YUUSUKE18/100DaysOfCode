@@ -50,10 +50,16 @@ li {
 .container .card .details {
   position: relative;
   text-align: center;
-  height: 316px;
+  height: 0px;
+  top: -2px;
   border: 2px solid #000;
   margin-top: -2px;
   overflow: hidden;
+  transition: 0.5s;
+}
+
+.container .card:hover .details {
+  height: 316px;
 }
 
 .container .card .details .content {
@@ -116,5 +122,10 @@ li {
   }
   .container .card {
     margin: 10px;
+  }
+
+  .container .card .details {
+    height: 316px;
+    transition: 0;
   }
 }
