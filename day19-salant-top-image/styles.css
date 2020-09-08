@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.top {
+  position: relative;
+  height: 500px;
+  width: 100%;
+}
+.top h2 {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  text-shadow: o 2px 20px rgb(0, 0, 0);
+}
+
+.top img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.content {
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  height: 450px;
+  padding-top: 130px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.content h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.content p {
+  padding: 0 180px;
+}
+
+.content::before {
+  background: rgb(255, 255, 255);
+  position: absolute;
+  content: "";
+  width: 60%;
+  height: 125px;
+  top: -50px;
+  left: 0;
+  transform: skewY(10deg);
+}
+
+.content::after {
+  background: rgb(255, 255, 255);
+  position: absolute;
+  content: "";
+  width: 60%;
+  height: 125px;
+  top: -50px;
+  right: 0;
+  transform: skewY(-10deg);
+}
+
+@media (max-width: 720px) {
+  body {
+    width: 100%;
+  }
+  .top {
+    height: 300px;
+  }
+  .top h2 {
+    font-size: 1.5rem;
+  }
+  .content {
+    height: 200px;
+    padding-top: 100px;
+  }
+  .content h3 {
+    font-size: 1.2rem;
+  }
+  .content p {
+    padding: 0 30px;
+  }
+  .content::before {
+    height: 100px;
+    top: -30px;
+    left: 0;
+    transform: skewY(10deg);
+  }
+
+  .content::after {
+    background: rgb(255, 255, 255);
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 100px;
+    top: -30px;
+    right: 0;
+    transform: skewY(-10deg);
+  }
+}
+
+@media (max-width: 430px) {
+  .top {
+    height: 200px;
+  }
+  .top h2 {
+    font-size: 1.3rem;
+  }
+  .content {
+    height: 100px;
+    padding-top: 50px;
+  }
+  .content h3 {
+    font-size: 1rem;
+  }
+  .content p {
+    padding: 0 10px;
+  }
+  .content::before {
+    height: 50px;
+    top: -15px;
+  }
+
+  .content::after {
+    height: 50px;
+    top: -15px;
+  }
+}
