@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: rgba(36, 255, 255, 0.8);
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .scroll-down {
+  height: 50px;
+}
+
+.container .scroll-down::before {
+  content: "";
+  position: absolute;
+  bottom: 318px;
+  left: 700px;
+  width: 40px;
+  height: 40px;
+  border-left: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+  transform: rotate(-45deg);
+}
+
+.container .scroll-down::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 100px;
+  background: rgb(255, 255, 255);
+  animation: animate 2s linear infinite;
+}
+
+.container .scroll-down p {
+  position: absolute;
+  text-align: center;
+  width: 120px;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  transform: translate(-50%, 150px);
+}
+
+@keyframes animate {
+  0% {
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+  45% {
+    transform-origin: top;
+    transform: scaleY(1);
+  }
+  55% {
+    transform-origin: bottom;
+    transform: scaleY(1);
+  }
+  100% {
+    transform-origin: bottom;
+    transform: scaleY(0);
+  }
+}
