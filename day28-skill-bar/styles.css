@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: rgb(13, 4, 136);
+}
+
+.container {
+  position: relative;
+  width: 600px;
+  min-height: 100vh;
+  color: rgb(255, 255, 255);
+  margin: 100px auto;
+}
+
+.container h2 {
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.container .skills {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.container .skills h3 {
+  margin: 5px 0 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.container .skills .progress {
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid rgb(255, 255, 255);
+  text-align: center;
+  line-height: 22px;
+  overflow: hidden;
+}
+
+.skills .progress .percent {
+  text-align: right;
+  padding-right: 5px;
+  border-right: 2px solid rgb(255, 255, 255);
+  animation: animate 0.5s linear infinite;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.25) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0.25) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 30px 30px;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30px 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    width: 300px;
+    margin: 50px auto;
+    padding: 0 10px;
+  }
+}
