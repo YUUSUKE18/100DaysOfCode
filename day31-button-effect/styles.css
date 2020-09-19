@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(17, 15, 15);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: rgb(30, 82, 23);
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.2s;
+  text-align: center;
+}
+
+.container a:hover {
+  color: #367519;
+  background: #91ff2a;
+  box-shadow: 0 0 10px #91ff2a, 0 0 20px #91ff2a, 0 0 40px #91ff2a,
+    0 0 80px #91ff2a;
+  transition-delay: 1s;
+}
+
+.container a span {
+  position: absolute;
+  display: block;
+}
+
+.container a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #91ff2a);
+}
+.container a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+
+.container a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #91ff2a);
+}
+.container a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+
+.container a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #91ff2a);
+}
+.container a:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.container a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #91ff2a);
+}
+.container a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+@media (max-width: 560px) {
+  .container {
+    flex-direction: column;
+  }
+}
