@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion Q and A</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="accordion">
+      <div class="content">
+        <div class="label">質問１</div>
+        <div class="ans">
+          つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。
+        </div>
+      </div>
+      <div class="content">
+        <div class="label">質問２</div>
+        <div class="ans">
+          つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。
+        </div>
+      </div>
+      <div class="content">
+        <div class="label">質問３</div>
+        <div class="ans">
+          つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。
+        </div>
+      </div>
+      <div class="content">
+        <div class="label">質問４</div>
+        <div class="ans">
+          つれづれなるまゝに、日暮らし、硯にむかひて、心にうつりゆくよしなし事を、そこはかとなく書きつくれば、あやしうこそものぐるほしけれ。
+        </div>
+      </div>
+    </div>
+    <script>
+      const accordion = document.getElementsByClassName("content");
+
+      for (i = 0; i < accordion.length; i++) {
+        accordion[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+      }
+    </script>
+  </body>
+</html>
