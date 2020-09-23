@@ -1,0 +1,115 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .questions {
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.container .questions .title {
+  background: #000;
+  color: rgb(255, 255, 255);
+  padding: 10px 30px;
+  text-align: center;
+}
+
+.container .questions .box {
+  position: relative;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 20px 30px;
+}
+
+.container .questions .box input[type="radio"] {
+  display: none;
+}
+
+.container .questions .box input[type="submit"] {
+  padding: 15px 20px;
+  border-radius: 30px;
+  border-color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.container .questions .box input[type="submit"]:hover {
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+  transition: all 0.3s ease-in;
+}
+
+.container .questions .box label {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 30px;
+  margin: 10px 0;
+  padding-left: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.container .questions .box label .dot {
+  height: 20px;
+  width: 20px;
+  background: rgb(199, 195, 195);
+  border-radius: 50%;
+  position: relative;
+}
+
+.container .questions .box label .dot::before {
+  position: absolute;
+  content: "";
+  height: 9px;
+  width: 9px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(2);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.container .questions .box label .content {
+  color: #333;
+  padding-left: 10px;
+  transition: color 0.3s ease;
+}
+
+#option-1:checked ~ .option-1,
+#option-2:checked ~ .option-2,
+#option-3:checked ~ .option-3,
+#option-4:checked ~ .option-4 {
+  background: rgb(51, 51, 51);
+  border-color: rgb(51, 51, 51);
+}
+
+#option-1:checked ~ .option-1 .dot::before,
+#option-2:checked ~ .option-2 .dot::before,
+#option-3:checked ~ .option-3 .dot::before,
+#option-4:checked ~ .option-4 .dot::before {
+  background: rgb(51, 51, 51);
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#option-1:checked ~ .option-1 .content,
+#option-2:checked ~ .option-2 .content,
+#option-3:checked ~ .option-3 .content,
+#option-4:checked ~ .option-4 .content {
+  color: rgb(255, 255, 255);
+}
