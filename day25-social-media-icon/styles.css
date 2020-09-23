@@ -50,17 +50,21 @@
 }
 
 .container ul li:nth-child(1) a:hover {
+  color: rgb(255, 255, 255);
   background-color: rgb(255, 2, 2);
 }
 
 .container ul li:nth-child(2) a:hover {
+  color: rgb(255, 255, 255);
   background-color: rgb(2, 162, 255);
 }
 
 .container ul li:nth-child(3) a:hover {
+  color: rgb(255, 255, 255);
   background-color: rgb(42, 119, 234);
 }
 
 .container ul li:nth-child(4) a:hover {
+  color: rgb(255, 255, 255);
   background-color: rgb(46, 119, 176);
 }
