@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 500px;
+}
+
+.container h2 {
+  color: rgb(0, 0, 0);
+}
+
+.container .skills {
+  position: relative;
+  display: flex;
+  margin: 20px 0;
+  padding: 20px 10px 15px;
+  background: linear-gradient(#616161 0%, #333 10%, #222);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid rgb(0, 0, 0);
+  transition: 0.5s;
+}
+
+.container:hover .skills {
+  opacity: 0.05;
+}
+
+.container .skills:hover {
+  opacity: 1;
+}
+.container .skills::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.container .skills .name {
+  position: relative;
+  width: 110px;
+  text-align: right;
+  color: rgb(255, 255, 255);
+  margin-top: -2px;
+}
+
+.container .skills .value {
+  position: relative;
+  width: 40px;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  margin-top: -2px;
+}
+
+.container .skills .percent {
+  position: relative;
+  width: calc(100% - 150px);
+  height: 20px;
+  margin: 0 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
+  overflow: hidden;
+}
+
+.container .skills .percent .progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+  box-shadow: inset 0 0 2px rgb(0, 0, 0);
+  animation: animate 4s ease-in-out forwards;
+}
+
+@keyframes animate {
+  from {
+    width: 0;
+  }
+}
+
+.container .skills:nth-child(2) .percent .progress {
+  background: linear-gradient(
+    #ff8383 0%,
+    rgb(255, 91, 91) 10%,
+    rgb(255, 14, 14)
+  );
+}
+
+.container .skills:nth-child(3) .percent .progress {
+  background: linear-gradient(
+    #9cff83 0%,
+    rgb(124, 255, 91) 10%,
+    rgb(62, 255, 14)
+  );
+}
+
+.container .skills:nth-child(4) .percent .progress {
+  background: linear-gradient(
+    #83fbff 0%,
+    rgb(91, 255, 241) 10%,
+    rgb(14, 255, 243)
+  );
+}
+
+.container .skills:nth-child(5) .percent .progress {
+  background: linear-gradient(
+    #ff83ff 0%,
+    rgb(217, 91, 255) 10%,
+    rgb(227, 14, 255)
+  );
+}
