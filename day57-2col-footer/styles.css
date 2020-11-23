@@ -6,11 +6,16 @@
 
 body {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   height: 100vh;
   flex-direction: column;
   background: rgb(202, 182, 182);
+  color: rgb(255, 255, 255);
+}
+
+li {
+  list-style: none;
 }
 
 footer {
@@ -19,14 +24,36 @@ footer {
   height: auto;
   padding: 50px 100px;
   background: #111;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 footer .container {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
 }
 
 footer .container .sec {
+  margin: 0 20px;
+}
+
+footer .container .sec.info {
+}
+footer .container .sec.info ul li {
+}
+footer .container .sec.info ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+footer .container .sec.contact {
+}
+
+.copyright {
+  width: 100%;
+  background: #111;
+  text-align: center;
 }
