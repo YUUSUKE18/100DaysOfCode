@@ -21,7 +21,6 @@ li {
 footer {
   position: relative;
   width: 100%;
-  height: auto;
   padding: 50px 100px;
   background: #111;
   display: flex;
@@ -30,6 +29,7 @@ footer {
 }
 
 footer .container {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -40,20 +40,39 @@ footer .container .sec {
   margin: 0 20px;
 }
 
-footer .container .sec.info {
-}
-footer .container .sec.info ul li {
-}
-footer .container .sec.info ul li a {
+footer .container .sec.info ul li a,
+footer .container .sec.contact ul li,
+footer .container .sec.contact ul li a {
   text-decoration: none;
+  color: rgb(187, 187, 187);
+}
+
+footer .container .sec.info ul li a:hover,
+footer .container .sec.contact ul li:hover,
+footer .container .sec.contact ul li a:hover {
   color: rgb(255, 255, 255);
 }
 
-footer .container .sec.contact {
+footer .container .sec.contact ul li {
+  color: rgb(187, 187, 187);
 }
 
 .copyright {
   width: 100%;
   background: #111;
   text-align: center;
+}
+
+@media (max-width: 991px) {
+  footer {
+    padding: 30px;
+  }
+
+  footer .container {
+    flex-direction: column;
+  }
+
+  footer .container .sec {
+    margin: 0 0 30px 0;
+  }
 }
